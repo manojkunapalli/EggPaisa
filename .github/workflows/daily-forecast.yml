@@ -6,6 +6,11 @@ on:
     - cron: "0 6 * * *"
     - cron: "0 14 * * *"
   workflow_dispatch:
+    inputs:
+      rebuild_months:
+        description: Rebuild High-price months now, without waiting for a new complete month
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -24,9 +29,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: pip
@@ -38,9 +43,21 @@ jobs:
       - name: Read NECC prices and forecast
         run: python Pipeline/forecast.py
 
+      # Works once a month, after NECC's last price of the month; if it fails, last month's file stays.
+      - name: Festival effects and High-price months
+        continue-on-error: true
+        run: python Pipeline/patterns.py ${{ inputs.rebuild_months && '--force' || '' }}
+
+      # The app reads these too: the prices when NECC's site can't be read, and each month's new High-price months.
+      - name: Publish the prices and High-price months
+        run: |
+          cp EggPaisa/Resources/necc_prices.json Public/prices.json
+          cp EggPaisa/Resources/necc_month_pattern.json Public/month_pattern.json
+
       - name: Save the new prices
         run: |
-          git add Data/necc_daily.csv Data/festival_calendar.csv EggPaisa/Resources/necc_prices.json
+          git add Data/necc_daily.csv Data/festival_calendar.csv Data/festival_effects.csv \
+                  EggPaisa/Resources/necc_prices.json EggPaisa/Resources/necc_month_pattern.json
           if git diff --cached --quiet; then
             echo "No new NECC prices"
           else
@@ -50,9 +67,9 @@ jobs:
             git push
           fi
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: Public
 
       - id: deploy
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

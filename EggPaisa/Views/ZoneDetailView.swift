@@ -21,6 +21,7 @@ struct ZoneDetailView: View {
             Section {
                 LatestPriceHeader(zone: zone)
             }
+            ForecastSection(zoneID: zone.id, latestPrice: zone.latest?.date)
             Section {
                 Picker("Range", selection: $range) {
                     ForEach(HistoryRange.allCases) { option in

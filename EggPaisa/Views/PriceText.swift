@@ -33,6 +33,11 @@ enum PriceFormat {
         value.formatted(.number.precision(.fractionLength(0...1)).locale(locale))
     }
 
+    /// A chance from 0 to 1 as a whole percent, e.g. "62%".
+    static func chance(_ fraction: Double) -> String {
+        fraction.formatted(.percent.precision(.fractionLength(0)).locale(locale))
+    }
+
     /// Adding 0 turns -0 into 0, so a value that rounds to zero shows as "0", not "-0".
     private static func whole(_ value: Double) -> Double {
         value.rounded() + 0

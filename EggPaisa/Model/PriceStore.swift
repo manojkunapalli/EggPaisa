@@ -11,11 +11,16 @@ final class PriceStore {
     private(set) var monthPatterns: MonthPatternFile?
     private(set) var monthPatternError: String?
     private(set) var isRefreshing = false
-    /// When NECC's website was last read successfully.
+    /// When new prices were last read, from NECC or the daily job's copy.
     private(set) var lastChecked: Date?
     private(set) var refreshError: String?
     @ObservationIgnored private var file: PriceFile?
     @ObservationIgnored private var refreshTask: Task<Void, Never>?
+
+    private static let savedPrices = "necc_prices.json"
+    /// The daily GitHub job's copy of NECC's prices, used when NECC's site can't be read.
+    private static let backupPrices = "prices.json"
+    private static let monthPatternFile = "month_pattern.json"
 
     init(bundle: Bundle = .main) {
         loadPrices(from: bundle)
@@ -30,13 +35,16 @@ final class PriceStore {
         await refresh()
     }
 
-    /// Adds NECC's newest prices; if that fails, the prices already shown stay.
+    /// Adds NECC's newest prices, or the daily job's copy if NECC can't be read; else the prices shown stay.
     func refresh() async {
         if let refreshTask {
             await refreshTask.value
             return
         }
-        let task = Task { await readNECC() }
+        let task = Task {
+            await readNECC()
+            await downloadMonthPatterns()
+        }
         refreshTask = task
         await task.value
         refreshTask = nil
@@ -69,8 +77,38 @@ final class PriceStore {
             lastChecked = .now
             refreshError = nil
         } catch {
-            refreshError = Self.message(for: error)
+            if await readBackup(of: file) {
+                lastChecked = .now
+                refreshError = nil
+            } else {
+                refreshError = Self.message(for: error)
+            }
         }
+    }
+
+    /// Takes the daily job's copy if it is newer; `false` if it couldn't be read either.
+    private func readBackup(of file: PriceFile) async -> Bool {
+        guard let data = try? await RemoteData.download(Self.backupPrices),
+              let backup = try? JSONDecoder().decode(PriceFile.self, from: data),
+              backup.zones.map(\.id) == file.zones.map(\.id) else { return false }
+        if backup.lastPriceDate > file.lastPriceDate {
+            apply(backup)
+            save(backup)
+        }
+        return true
+    }
+
+    /// The High-price months file, which the daily job rebuilds once a month.
+    private func downloadMonthPatterns() async {
+        guard let data = try? await RemoteData.download(Self.monthPatternFile),
+              let patterns = try? JSONDecoder().decode(MonthPatternFile.self, from: data),
+              let current = monthPatterns, Self.canReplace(current, with: patterns) else { return }
+        monthPatterns = patterns
+        RemoteData.save(data, as: Self.monthPatternFile)
+    }
+
+    private static func canReplace(_ current: MonthPatternFile, with other: MonthPatternFile) -> Bool {
+        other.lastMonth >= current.lastMonth && other.zones.map(\.id) == current.zones.map(\.id)
     }
 
     private func loadPrices(from bundle: Bundle) {
@@ -81,7 +119,8 @@ final class PriceStore {
         do {
             let bundled = try JSONDecoder().decode(PriceFile.self, from: Data(contentsOf: url))
             // A saved copy is used only while it is newer than the prices this version of the app ships with.
-            if let saved = try? JSONDecoder().decode(PriceFile.self, from: Data(contentsOf: Self.savedURL)),
+            if let data = RemoteData.saved(Self.savedPrices),
+               let saved = try? JSONDecoder().decode(PriceFile.self, from: data),
                saved.lastPriceDate > bundled.lastPriceDate, saved.zones.map(\.id) == bundled.zones.map(\.id) {
                 apply(saved)
             } else {
@@ -101,16 +140,9 @@ final class PriceStore {
     }
 
     private func save(_ file: PriceFile) {
-        // Best effort: without the saved copy, the next launch starts from the bundled prices and reads NECC again.
-        try? FileManager.default.createDirectory(
-            at: Self.savedURL.deletingLastPathComponent(),
-            withIntermediateDirectories: true
-        )
-        try? JSONEncoder().encode(file).write(to: Self.savedURL, options: .atomic)
-    }
-
-    private static var savedURL: URL {
-        URL.applicationSupportDirectory.appending(path: "necc_prices.json")
+        if let data = try? JSONEncoder().encode(file) {
+            RemoteData.save(data, as: Self.savedPrices)
+        }
     }
 
     /// From a week before the newest price, as NECC sometimes fills in days late, to this month; a year at most.
@@ -143,7 +175,15 @@ final class PriceStore {
             return
         }
         do {
-            monthPatterns = try JSONDecoder().decode(MonthPatternFile.self, from: Data(contentsOf: url))
+            let bundled = try JSONDecoder().decode(MonthPatternFile.self, from: Data(contentsOf: url))
+            // A downloaded copy is used while it is at least as new as the bundled file.
+            if let data = RemoteData.saved(Self.monthPatternFile),
+               let saved = try? JSONDecoder().decode(MonthPatternFile.self, from: data),
+               Self.canReplace(bundled, with: saved) {
+                monthPatterns = saved
+            } else {
+                monthPatterns = bundled
+            }
         } catch {
             monthPatternError = error.localizedDescription
         }

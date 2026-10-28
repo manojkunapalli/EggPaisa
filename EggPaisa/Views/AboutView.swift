@@ -24,6 +24,17 @@ struct AboutView: View {
                 Text("When NECC shows no price for a day, the previous day's price is used.")
                 Text("EggPaisa is not affiliated with NECC.")
             }
+            Section("Forecasts") {
+                Text("""
+                    Each zone's next 14 days come from a model trained on past NECC prices and festival dates, \
+                    updated twice a day. The app keeps the latest forecast for offline use and hides it \
+                    once it is more than \(ForecastFile.maxAgeDays) days old.
+                    """)
+                Text("""
+                    Forecasts can be wrong. Prices also move with things the model can't see, such as \
+                    bird flu or a sudden change in demand. Use them as a guide, not a promise.
+                    """)
+            }
             ClarificationSection(text: store.clarification)
             Section {
                 LabeledContent("Version", value: version)

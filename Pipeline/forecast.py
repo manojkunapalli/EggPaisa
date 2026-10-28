@@ -45,13 +45,6 @@ def update_prices(ca_file: str | None) -> None:
     subprocess.run(command, check=True)
 
 
-def ensure_calendar() -> None:
-    """Rebuilds the festival calendar once a new year has to be added."""
-    if festivals.read_calendar().year.max() < festivals.LAST_YEAR:
-        festivals.write_calendar()
-        print(f"Festival calendar rebuilt to {festivals.LAST_YEAR}")
-
-
 def forecast() -> dict:
     daily = daily_prices()
     published = zone_prices(daily)
@@ -133,7 +126,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if not args.skip_update:
             update_prices(args.ca_file)
-        ensure_calendar()
+        festivals.ensure_calendar()
         payload = forecast()
         check(payload)
     except (OSError, ValueError, subprocess.CalledProcessError) as error:

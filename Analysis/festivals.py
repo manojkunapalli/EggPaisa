@@ -202,6 +202,13 @@ def write_calendar() -> pd.DataFrame:
     return table
 
 
+def ensure_calendar() -> None:
+    """Rebuilds the calendar once a new year has to be added."""
+    if read_calendar().year.max() < LAST_YEAR:
+        write_calendar()
+        print(f"Festival calendar rebuilt to {LAST_YEAR}")
+
+
 def daily_flags(days: pd.DatetimeIndex, occurrences: pd.DataFrame) -> pd.DataFrame:
     """True on the days inside each event; one column per event id."""
     flags = pd.DataFrame(False, index=days, columns=[event.id for event in EVENTS])

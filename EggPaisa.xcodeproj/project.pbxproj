@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		C1E55A07308F8F83005CEAD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 908585B9308F8F83005CEAD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 908585C0308F8F83005CEAD4;
+			remoteInfo = EggPaisa;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		908585C1308F8F83005CEAD4 /* EggPaisa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggPaisa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1E55A01308F8F83005CEAD4 /* EggPaisaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EggPaisaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = EggPaisa;
 			sourceTree = "<group>";
 		};
+		C1E55A02308F8F83005CEAD4 /* EggPaisaTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EggPaisaTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		908585BE308F8F83005CEAD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1E55A03308F8F83005CEAD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				908585C3308F8F83005CEAD4 /* EggPaisa */,
+				C1E55A02308F8F83005CEAD4 /* EggPaisaTests */,
 				908585C2308F8F83005CEAD4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				908585C1308F8F83005CEAD4 /* EggPaisa.app */,
+				C1E55A01308F8F83005CEAD4 /* EggPaisaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 908585C1308F8F83005CEAD4 /* EggPaisa.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C1E55A06308F8F83005CEAD4 /* EggPaisaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1E55A0B308F8F83005CEAD4 /* Build configuration list for PBXNativeTarget "EggPaisaTests" */;
+			buildPhases = (
+				C1E55A05308F8F83005CEAD4 /* Sources */,
+				C1E55A03308F8F83005CEAD4 /* Frameworks */,
+				C1E55A04308F8F83005CEAD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1E55A08308F8F83005CEAD4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C1E55A02308F8F83005CEAD4 /* EggPaisaTests */,
+			);
+			name = EggPaisaTests;
+			packageProductDependencies = (
+			);
+			productName = EggPaisaTests;
+			productReference = C1E55A01308F8F83005CEAD4 /* EggPaisaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					908585C0308F8F83005CEAD4 = {
 						CreatedOnToolsVersion = 26.6;
+					};
+					C1E55A06308F8F83005CEAD4 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 908585C0308F8F83005CEAD4;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				908585C0308F8F83005CEAD4 /* EggPaisa */,
+				C1E55A06308F8F83005CEAD4 /* EggPaisaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		908585BF308F8F83005CEAD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1E55A04308F8F83005CEAD4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C1E55A05308F8F83005CEAD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1E55A08308F8F83005CEAD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 908585C0308F8F83005CEAD4 /* EggPaisa */;
+			targetProxy = C1E55A07308F8F83005CEAD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		908585CA308F8F8C005CEAD4 /* Debug */ = {
@@ -310,6 +385,50 @@
 			};
 			name = Release;
 		};
+		C1E55A09308F8F83005CEAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GM7LPQSW9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = manoj.kiran.EggPaisaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EggPaisa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EggPaisa";
+			};
+			name = Debug;
+		};
+		C1E55A0A308F8F83005CEAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GM7LPQSW9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = manoj.kiran.EggPaisaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EggPaisa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EggPaisa";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +446,15 @@
 			buildConfigurations = (
 				908585CD308F8F8C005CEAD4 /* Debug */,
 				908585CE308F8F8C005CEAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1E55A0B308F8F83005CEAD4 /* Build configuration list for PBXNativeTarget "EggPaisaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1E55A09308F8F83005CEAD4 /* Debug */,
+				C1E55A0A308F8F83005CEAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -2,6 +2,7 @@ import SwiftUI
 
 struct TodayView: View {
     @Environment(PriceStore.self) private var store
+    @Environment(ForecastStore.self) private var forecasts
     @State private var showsAbout = false
 
     var body: some View {
@@ -34,6 +35,7 @@ struct TodayView: View {
         }
         .refreshable {
             await store.refresh()
+            await forecasts.refresh()
         }
         .navigationTitle("EggPaisa")
         .toolbar {

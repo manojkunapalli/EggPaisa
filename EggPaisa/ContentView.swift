@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(PriceStore.self) private var store
+    @Environment(ForecastStore.self) private var forecasts
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -29,6 +30,9 @@ struct ContentView: View {
                 Task {
                     await store.refreshIfStale()
                 }
+                Task {
+                    await forecasts.refreshIfStale()
+                }
             }
         }
     }
@@ -37,4 +41,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environment(PriceStore())
+        .environment(ForecastStore())
 }
