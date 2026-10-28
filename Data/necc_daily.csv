@@ -201928,6 +201928,7 @@ date,zone,type,price
 2026-10-28,Ajmer,suggested,590
 2026-10-28,Barwala,suggested,597
 2026-10-28,Bengaluru (CC),suggested,615
+2026-10-28,Brahmapur (OD),suggested,600
 2026-10-28,Chennai (CC),suggested,640
 2026-10-28,Chittoor,suggested,633
 2026-10-28,Delhi (CC),suggested,640
@@ -201940,6 +201941,7 @@ date,zone,type,price
 2026-10-28,Mysuru,suggested,635
 2026-10-28,Namakkal,suggested,570
 2026-10-28,Pune,suggested,630
+2026-10-28,Raipur,suggested,590
 2026-10-28,Surat,suggested,630
 2026-10-28,Vijayawada,suggested,620
 2026-10-28,Vizag,suggested,595
@@ -201949,5 +201951,8 @@ date,zone,type,price
 2026-10-28,Indore (CC),prevailing,600
 2026-10-28,Kanpur (CC),prevailing,643
 2026-10-28,Luknow (CC),prevailing,640
+2026-10-28,Muzaffurpur (CC),prevailing,650
 2026-10-28,Nagpur,prevailing,610
+2026-10-28,Patna,prevailing,650
+2026-10-28,Ranchi (CC),prevailing,638
 2026-10-28,Varanasi (CC),prevailing,638
