@@ -1,0 +1,99 @@
+NECC daily egg prices: backfill report
+Generated 2026-10-26 23:13 IST from 214 daily sheets, 2009-01 to 2026-10
+201891 price rows in Data/necc_daily.csv (prices are ₹ per 100 eggs)
+Sheets without a price table: none
+Average check: 6654 zone-months compared with the sheet's Average column, 12 differ
+  2010-09 Bengaluru (CC): ours 232.69, sheet 232.1
+  2010-09 Chennai (CC): ours 242.29, sheet 241.47
+  2010-09 Kolkata (WB): ours 275.86, sheet 275.2
+  2010-09 Mysuru: ours 231.61, sheet 230.5
+  2010-09 Namakkal: ours 235.71, sheet 235.67
+  2010-09 Raipur: ours 240.1, sheet 239.37
+  2020-06 Hyderabad: ours 367.1, sheet 367.78
+  2020-08 Hyderabad: ours 367.06, sheet 367.66
+  2020-09 Namakkal: ours 465.83, sheet 466.29
+  2024-06 Brahmapur (OD): ours 502.5, sheet 502.42
+  2024-09 Chennai (CC): ours 545.67, sheet 545.16
+  2026-10 Kolkata (WB): ours 634.04, sheet 632.04
+
+Zones by first priced date (gaps = '-' days between the first and last price):
+  zone                 type                 first      last        days  gaps  note
+  Ahmedabad            suggested            2009-01-01 2026-10-26  6507     1  
+  Ajmer                suggested            2009-01-01 2026-10-26  6497    11  
+  Bengaluru (CC)       suggested            2009-01-01 2026-10-26  6506     2  
+  Chennai (CC)         suggested            2009-01-01 2026-10-26  6505     3  
+  Chittoor             suggested            2009-01-01 2026-10-26  6506     2  
+  Delhi (CC)           suggested            2009-01-01 2026-10-26  6505     3  
+  Hyderabad            suggested            2009-01-01 2026-10-26  6503     5  
+  Indore (CC)          prevailing           2009-01-01 2026-10-26  6504     4  
+  Jabalpur             prevailing/suggested 2009-01-01 2026-10-26  6505     3  
+  Kolkata (WB)         suggested            2009-01-01 2026-10-26  6492    16  
+  Luknow (CC)          prevailing           2009-01-01 2026-10-26  6490    18  
+  Mumbai (CC)          suggested            2009-01-01 2026-10-26  6505     3  
+  Mysuru               suggested            2009-01-01 2026-10-26  6505     3  
+  Nagpur               prevailing           2009-01-01 2026-10-26  6492    16  
+  Namakkal             suggested            2009-01-01 2026-10-26  6505     3  
+  Varanasi (CC)        prevailing           2009-01-01 2026-10-26  6498    10  
+  Vijayawada           suggested            2009-01-01 2026-10-26  6506     2  
+  Vizag                suggested            2009-01-01 2026-10-26  6507     1  
+  W.Godavari           suggested            2009-01-01 2026-10-26  6507     1  
+  Warangal             suggested            2009-01-01 2026-10-26  6507     1  
+  Allahabad (CC)       prevailing           2009-02-01 2026-10-26  6461    16  
+  Bhopal               prevailing           2009-02-01 2026-10-26  6474     3  
+  Hospet               suggested            2009-02-01 2026-10-26  5761   716  
+  Kanpur (CC)          prevailing           2009-02-01 2026-10-26  6469     8  
+  Ludhiana             suggested            2009-02-01 2026-10-26  6411    66  
+  Pune                 suggested            2009-02-01 2026-10-26  6476     1  
+  Raipur               suggested            2009-02-01 2026-10-26  6471     6  
+  Barwala              suggested            2009-02-02 2026-10-26  6436    40  
+  E.Godavari           suggested            2009-03-01 2026-10-26  6448     1  
+  Surat                suggested            2017-11-21 2026-10-26  2674   588  
+  Asansole             suggested            2019-01-01 2020-08-13   402   189  not in latest sheet
+  Burdwan (CC)         suggested            2019-01-01 2020-08-12   407   183  not in latest sheet
+  Midnapur (KOL)       suggested            2019-01-01 2020-08-13   408   183  not in latest sheet
+  Muzaffurpur (CC)     prevailing           2019-01-01 2026-10-26  2663   193  
+  Patna                prevailing           2019-01-01 2026-10-26  2664   192  
+  Ranchi (CC)          prevailing           2019-01-01 2026-10-26  2660   196  
+  Brahmapur (OD)       suggested            2019-05-01 2026-10-26  2554   182  
+
+Priced days per year:
+  zone                 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026
+  Ahmedabad             365  364  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Ajmer                 364  355  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Bengaluru (CC)        365  363  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Chennai (CC)          365  362  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Chittoor              365  363  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Delhi (CC)            365  364  365  366  365  365  365  366  365  365  365  366  363  365  365  366  365  299
+  Hyderabad             365  364  365  366  365  365  361  366  365  365  365  366  365  365  365  366  365  299
+  Indore (CC)           365  362  365  366  365  365  365  366  365  365  364  366  365  365  365  366  365  299
+  Jabalpur              365  362  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Kolkata (WB)          364  360  360  366  364  364  363  365  365  365  365  366  365  365  365  366  365  299
+  Luknow (CC)           364  361  356  366  365  365  365  366  365  365  365  362  365  365  365  366  365  299
+  Mumbai (CC)           365  364  365  366  365  365  365  366  365  365  364  366  365  365  365  366  364  299
+  Mysuru                365  362  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Nagpur                363  364  364  366  365  365  365  366  364  365  365  355  365  365  365  366  365  299
+  Namakkal              365  362  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Varanasi (CC)         364  361  365  366  365  364  365  366  365  365  365  362  365  365  365  366  365  299
+  Vijayawada            364  364  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Vizag                 365  364  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  W.Godavari            365  364  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Warangal              365  364  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Allahabad (CC)        333  360  365  366  365  365  365  366  365  365  365  356  365  365  365  366  365  299
+  Bhopal                334  362  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Hospet                333  362  365   50       334  365  366  365  365  365  366  365  365  365  366  365  299
+  Kanpur (CC)           333  361  365  366  365  365  365  366  365  365  365  363  365  365  365  366  365  299
+  Ludhiana              292  351  365  365  365  363  365  366  365  365  365  359  365  365  365  366  365  299
+  Pune                  334  364  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Raipur                333  360  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Barwala               333  362  365  366  365  365  365  366  365  363  357  339  365  365  365  366  365  299
+  E.Godavari            306  364  365  366  365  365  365  366  365  365  365  366  365  365  365  366  365  299
+  Surat                                                           1       182  366  365  365  365  366  365  299
+  Asansole                                                                182  220                              
+  Burdwan (CC)                                                            182  225                              
+  Midnapur (KOL)                                                          182  226                              
+  Muzaffurpur (CC)                                                        182  356  365  365  365  366  365  299
+  Patna                                                                   181  358  365  365  365  366  365  299
+  Ranchi (CC)                                                             182  353  365  365  365  366  365  299
+  Brahmapur (OD)                                                           63  366  365  365  365  366  365  299
+
+Prices outside 50-2000: 0

@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Xcode per-user state
+xcuserdata/
+
+# Python
+__pycache__/
+.venv/
+
+# Raw NECC pages; re-downloadable with Scripts/necc.py
+Data/raw/
+
+# Built by Pipeline/forecast.py and published by the daily workflow
+Public/

@@ -1,0 +1,12 @@
+# python3 -m venv .venv && .venv/bin/pip install -r Analysis/requirements.txt
+pandas==2.3.3
+numpy==2.0.2
+matplotlib==3.9.4
+ipykernel==6.31.0
+nbconvert==7.17.2
+ephem==4.2.1
+hijridate==2.5.0
+openpyxl==3.1.5
+statsmodels==0.14.6
+scikit-learn==1.6.1
+scipy==1.13.1
