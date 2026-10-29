@@ -201932,6 +201932,7 @@ date,zone,type,price
 2026-10-28,Chennai (CC),suggested,640
 2026-10-28,Chittoor,suggested,633
 2026-10-28,Delhi (CC),suggested,640
+2026-10-28,E.Godavari,suggested,580
 2026-10-28,Hospet,suggested,555
 2026-10-28,Hyderabad,suggested,575
 2026-10-28,Jabalpur,suggested,605
@@ -201945,6 +201946,7 @@ date,zone,type,price
 2026-10-28,Surat,suggested,630
 2026-10-28,Vijayawada,suggested,620
 2026-10-28,Vizag,suggested,595
+2026-10-28,W.Godavari,suggested,580
 2026-10-28,Warangal,suggested,577
 2026-10-28,Allahabad (CC),prevailing,648
 2026-10-28,Bhopal,prevailing,620
@@ -201956,3 +201958,35 @@ date,zone,type,price
 2026-10-28,Patna,prevailing,650
 2026-10-28,Ranchi (CC),prevailing,638
 2026-10-28,Varanasi (CC),prevailing,638
+2026-10-29,Ahmedabad,suggested,610
+2026-10-29,Barwala,suggested,597
+2026-10-29,Bengaluru (CC),suggested,615
+2026-10-29,Brahmapur (OD),suggested,600
+2026-10-29,Chennai (CC),suggested,640
+2026-10-29,Chittoor,suggested,633
+2026-10-29,Delhi (CC),suggested,640
+2026-10-29,E.Godavari,suggested,580
+2026-10-29,Hospet,suggested,555
+2026-10-29,Hyderabad,suggested,575
+2026-10-29,Jabalpur,suggested,605
+2026-10-29,Kolkata (WB),suggested,635
+2026-10-29,Ludhiana,suggested,600
+2026-10-29,Mumbai (CC),suggested,630
+2026-10-29,Mysuru,suggested,635
+2026-10-29,Namakkal,suggested,570
+2026-10-29,Pune,suggested,630
+2026-10-29,Raipur,suggested,590
+2026-10-29,Surat,suggested,630
+2026-10-29,Vijayawada,suggested,620
+2026-10-29,Vizag,suggested,595
+2026-10-29,W.Godavari,suggested,580
+2026-10-29,Warangal,suggested,577
+2026-10-29,Allahabad (CC),prevailing,648
+2026-10-29,Bhopal,prevailing,620
+2026-10-29,Kanpur (CC),prevailing,643
+2026-10-29,Luknow (CC),prevailing,640
+2026-10-29,Muzaffurpur (CC),prevailing,650
+2026-10-29,Nagpur,prevailing,605
+2026-10-29,Patna,prevailing,650
+2026-10-29,Ranchi (CC),prevailing,638
+2026-10-29,Varanasi (CC),prevailing,643
