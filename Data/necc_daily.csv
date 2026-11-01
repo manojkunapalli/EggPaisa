@@ -202083,6 +202083,7 @@ date,zone,type,price
 2026-11-01,Vijayawada,suggested,675
 2026-11-01,Vizag,suggested,630
 2026-11-01,W.Godavari,suggested,625
+2026-11-01,Warangal,suggested,617
 2026-11-01,Allahabad (CC),prevailing,674
 2026-11-01,Bhopal,prevailing,670
 2026-11-01,Indore (CC),prevailing,650
@@ -202093,3 +202094,5 @@ date,zone,type,price
 2026-11-01,Patna,prevailing,685
 2026-11-01,Ranchi (CC),prevailing,662
 2026-11-01,Varanasi (CC),prevailing,667
+2026-11-02,Ludhiana,suggested,625
+2026-11-02,Vizag,suggested,640
