@@ -202638,7 +202638,7 @@ date,zone,type,price
 2026-11-17,Varanasi (CC),prevailing,695
 2026-11-18,Ahmedabad,suggested,695
 2026-11-18,Ajmer,suggested,625
-2026-11-18,Barwala,suggested,643
+2026-11-18,Barwala,suggested,622
 2026-11-18,Bengaluru (CC),suggested,680
 2026-11-18,Brahmapur (OD),suggested,670
 2026-11-18,Chennai (CC),suggested,670
@@ -202670,3 +202670,36 @@ date,zone,type,price
 2026-11-18,Patna,prevailing,690
 2026-11-18,Ranchi (CC),prevailing,695
 2026-11-18,Varanasi (CC),prevailing,695
+2026-11-19,Ahmedabad,suggested,660
+2026-11-19,Ajmer,suggested,625
+2026-11-19,Barwala,suggested,622
+2026-11-19,Bengaluru (CC),suggested,680
+2026-11-19,Brahmapur (OD),suggested,670
+2026-11-19,Chennai (CC),suggested,670
+2026-11-19,Chittoor,suggested,663
+2026-11-19,Delhi (CC),suggested,683
+2026-11-19,E.Godavari,suggested,640
+2026-11-19,Hospet,suggested,620
+2026-11-19,Jabalpur,suggested,660
+2026-11-19,Kolkata (WB),suggested,715
+2026-11-19,Ludhiana,suggested,645
+2026-11-19,Mumbai (CC),suggested,705
+2026-11-19,Mysuru,suggested,680
+2026-11-19,Namakkal,suggested,600
+2026-11-19,Pune,suggested,705
+2026-11-19,Raipur,suggested,635
+2026-11-19,Surat,suggested,680
+2026-11-19,Vijayawada,suggested,650
+2026-11-19,Vizag,suggested,645
+2026-11-19,W.Godavari,suggested,640
+2026-11-19,Warangal,suggested,632
+2026-11-19,Allahabad (CC),prevailing,720
+2026-11-19,Bhopal,prevailing,660
+2026-11-19,Indore (CC),prevailing,645
+2026-11-19,Kanpur (CC),prevailing,710
+2026-11-19,Luknow (CC),prevailing,697
+2026-11-19,Muzaffurpur (CC),prevailing,685
+2026-11-19,Nagpur,prevailing,680
+2026-11-19,Patna,prevailing,685
+2026-11-19,Ranchi (CC),prevailing,695
+2026-11-19,Varanasi (CC),prevailing,695
