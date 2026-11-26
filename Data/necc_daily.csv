@@ -202903,3 +202903,36 @@ date,zone,type,price
 2026-11-25,Nagpur,prevailing,610
 2026-11-25,Ranchi (CC),prevailing,643
 2026-11-25,Varanasi (CC),prevailing,643
+2026-11-26,Ahmedabad,suggested,610
+2026-11-26,Ajmer,suggested,585
+2026-11-26,Barwala,suggested,585
+2026-11-26,Bengaluru (CC),suggested,600
+2026-11-26,Brahmapur (OD),suggested,610
+2026-11-26,Chennai (CC),suggested,600
+2026-11-26,Chittoor,suggested,593
+2026-11-26,Delhi (CC),suggested,630
+2026-11-26,E.Godavari,suggested,585
+2026-11-26,Hospet,suggested,540
+2026-11-26,Hyderabad,suggested,560
+2026-11-26,Jabalpur,suggested,570
+2026-11-26,Kolkata (WB),suggested,630
+2026-11-26,Ludhiana,suggested,590
+2026-11-26,Mumbai (CC),suggested,630
+2026-11-26,Mysuru,suggested,600
+2026-11-26,Namakkal,suggested,540
+2026-11-26,Pune,suggested,640
+2026-11-26,Surat,suggested,600
+2026-11-26,Vijayawada,suggested,580
+2026-11-26,Vizag,suggested,585
+2026-11-26,W.Godavari,suggested,585
+2026-11-26,Warangal,suggested,562
+2026-11-26,Allahabad (CC),prevailing,643
+2026-11-26,Bhopal,prevailing,610
+2026-11-26,Indore (CC),prevailing,580
+2026-11-26,Kanpur (CC),prevailing,652
+2026-11-26,Luknow (CC),prevailing,653
+2026-11-26,Muzaffurpur (CC),prevailing,635
+2026-11-26,Nagpur,prevailing,610
+2026-11-26,Patna,prevailing,635
+2026-11-26,Ranchi (CC),prevailing,648
+2026-11-26,Varanasi (CC),prevailing,643
